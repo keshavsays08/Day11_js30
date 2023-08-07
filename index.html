@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-11</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="player">
+        <video class="player__video viewer" src="video_sample.mp4"></video>
+
+        <div class="player_controls">
+            <!-- progress bar  -->
+            <div class="progress">
+                <div class="progress__filled">
+                </div>
+            </div>
+
+            <button style="margin-left: 1rem; margin-bottom: 1rem;" class="player__button togglePP"
+                title="Toggle Play"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <!-- playback Rate Slider  -->
+
+            <input style="margin-top: 1rem;" type="range" name="playbackRate" class="player__slider togglePR" min="0.25"
+                max="2" step="0.25" value="1">
+
+
+            <!-- volume slider  -->
+
+            <input type="range" id="updateVolume" name="volume" class="player__slider toggleV" min="0" max="1"
+                step="0.05" value="1">
+
+
+
+            <button data-skip="-10" class="player__button"><i class="fa fa-chevron-left" aria-hidden="true"></i><i
+                    class="fa fa-chevron-left" aria-hidden="true"></i>10s &nbsp; &nbsp; &nbsp; </button>
+            <button data-skip="10" class="player__button">&nbsp;10s <i class="fa fa-chevron-right"
+                    aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
